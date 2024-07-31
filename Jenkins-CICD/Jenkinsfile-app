@@ -22,7 +22,7 @@ pipeline{
             //steps{
                 //withSonarQubeEnv('sonar-server') {
                     //sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.projectName=TetrisVersion1.0 \
-                    -Dsonar.projectKey=TetrisVersion1.0 '''
+                    //-Dsonar.projectKey=TetrisVersion1.0 '''
                 //}
             //}
         //}
@@ -41,7 +41,7 @@ pipeline{
         //stage('OWASP FS SCAN') {
             //steps {
                 //dependencyCheck additionalArguments: '--scan ./ --disableYarnAudit --disableNodeAudit', odcInstallation: 'DP-Check'
-                dependencyCheckPublisher pattern: '**/dependency-check-report.xml'
+                //dependencyCheckPublisher pattern: '**/dependency-check-report.xml'
             //}
         //}
         //stage('TRIVY FS SCAN') {
@@ -67,7 +67,8 @@ pipeline{
         }
     }
 }
-
+      
+               
         
 
        
